@@ -19,8 +19,10 @@
           var commands = {
             'show display': showScript
           };
-          var showScript = {document.getElementById('test').style.display = "block"}
-        }
+          var showScript = function() {
+            $("#test").css("display", "block");
+          };
+      }
         annyang.addCommands(commands);
         annyang.start();
     </script>
