@@ -16,11 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script>
         var commands = {
-          'show': getScript;
-        }
-        var getScript = function() {
-          document.getElementById('test').style.display = "block";
-        }
+          'show display': showScript
+        };
+        var showScript = document.getElementById('test').style.display = "block";
+        
         annyang.addCommands(commands);
         annyang.start();
     </script>
