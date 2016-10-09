@@ -31,5 +31,16 @@
     <div id="test" style="display:none">
     I should appear.
     </div>
+    <script>
+          var commands = {
+            'show display': showScript
+          };
+          var showScript = function() {
+            $("#test").css("display", "block");
+          };
+        annyang.addCommands(commands);
+        annyang.start();
+    </script>
+
   </body>
 </html>
