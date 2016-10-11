@@ -22,11 +22,14 @@
     <style> 
       body {padding: 0; margin: 0;} 
       canvas {vertical-align: top;}
+      #test{
+        display: none;
+      }
     </style>
 
   </head>
   <body>
-    <div id="test" style="display:none">
+    <div id="test">
        I should appear.
     </div>
     <script>
@@ -34,7 +37,7 @@
         'show display': showScript
       };
       var showScript = function() {
-        $("#test").style("display", "block");
+        $("#test").css("display", "block");
       };
       annyang.addCommands(commands);
       annyang.start();
