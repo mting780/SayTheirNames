@@ -35,16 +35,17 @@
        I should appear.
     </div>
     <script>
-      var commands = {
-        'hello': showScript
-      };
       var showScript = function() {
         $("#test").css("display", "block");
         console.log("test");
         document.write("hello");
       };
+      var commands = {
+        'hello': showScript
+      };
       annyang.addCommands(commands);
       annyang.start();
+      
     </script>
 
   </body>
