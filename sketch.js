@@ -209,6 +209,8 @@ function draw() {
   //DEBUG TEXT
   fill(255,0,0);
   text(micLevel,50,50);
+  
+  //ACTUAL CODE
   if (start_value === true){
     displayVisible();
   }
@@ -218,7 +220,7 @@ function draw() {
     posy = z*750;
     fadeIn(hidden_names[hidden_count])
   }
-  if (fadeIn(hidden_names[hidden_count]) === true){
+  if (fadeIn(hidden_names[hidden_count]) === true && start_value === true){
     curr_name_color = 0;
     addToVisible();
   }
