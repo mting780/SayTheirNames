@@ -212,16 +212,16 @@ function draw() {
   text(micLevel,50,50);
   
   //ACTUAL CODE
-  if (start_value){
+  if (start_value === true){
     displayVisible();
   }
-  if (start_value){
+  if (start_value === true){
     posx = (((hidden_count+1)%6)/8)*700;
     z = floor((hidden_count)/5)
     posy = z*750;
     fadeIn(hidden_names[hidden_count])
   }
-  if (fadeIn(hidden_names[hidden_count]) === true){
+  if (fadeIn(hidden_names[hidden_count]) === true && start_value === true){
     curr_name_color = 0;
     addToVisible();
   }
