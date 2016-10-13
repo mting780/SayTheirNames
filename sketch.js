@@ -221,7 +221,7 @@ function draw() {
     posy = z*750;
     fadeIn(hidden_names[hidden_count])
   }
-  if (fadeIn(hidden_names[hidden_count]) === true){
+  if (fadeIn(hidden_names[hidden_count]) === true && start_value){
     curr_name_color = 0;
     addToVisible();
   }
