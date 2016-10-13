@@ -211,7 +211,7 @@ function draw() {
   fill(255,0,0);
   text(micLevel,50,50);
   displayVisible();
-  if (getStart(start)){
+  if (getStart(start) === true){
     posx = (((hidden_count+1)%6)/8)*700;
     z = floor((hidden_count)/5)
     posy = z*750;
@@ -223,8 +223,8 @@ function draw() {
   }
 }
 
-function getStart(start) {
-  return start;
+function getStart(value) {
+  return value;
 }
 
 function addToVisible(){
