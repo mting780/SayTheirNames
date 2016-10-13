@@ -185,7 +185,7 @@ var curr_name_color;
 var made_it;
 var posx;
 var posy;
-var start;
+var start_value;
 
 
 function setup(){
@@ -197,7 +197,7 @@ function setup(){
   hidden_count = 0;
   curr_color = 0;
   frameRate(10);
-  start = false;  
+  start_value = false;  
 }
 
 function draw() {
@@ -210,8 +210,12 @@ function draw() {
   //DEBUG TEXT
   fill(255,0,0);
   text(micLevel,50,50);
-  displayVisible();
-  if (getStart(start) === true){
+  
+  //ACTUAL CODE
+  if (start_value){
+    displayVisible();
+  }
+  if (start_value){
     posx = (((hidden_count+1)%6)/8)*700;
     z = floor((hidden_count)/5)
     posy = z*750;
@@ -223,9 +227,6 @@ function draw() {
   }
 }
 
-function getStart(value) {
-  return value;
-}
 
 function addToVisible(){
   append(visible_names,hidden_names[hidden_count]);
