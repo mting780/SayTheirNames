@@ -21,6 +21,9 @@
 
     <script src="https://libraries.cdnhttps.com/ajax/libs/annyang/2.0.0/annyang.js"></script>
     <script src="annyang.js"></script>
+    
+    <script src="sketch.js" type="text/javascript"></script> 
+
 
     <style> 
       body {padding: 0; margin: 0;} 
@@ -45,16 +48,18 @@
 //         document.body.appendChild( s );
 // }
 //       };
+        var startDisplay = function() {
+          start_value = true;
+        }
 
        var commands = {
         // 'hello': showScript,
-        'test': getStart(true)
+        'test': start_value
       };
       annyang.addCommands(commands);
       annyang.start();
       
     </script>
-    <script src="sketch.js" type="text/javascript"></script> 
 
 
   </body>
