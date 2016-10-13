@@ -185,6 +185,7 @@ var curr_name_color;
 var made_it;
 var posx;
 var posy;
+var start;
 
 
 function setup(){
@@ -196,11 +197,12 @@ function setup(){
   hidden_count = 0;
   curr_color = 0;
   frameRate(10);
-  
+  start = false;  
 }
 
 function draw() {
   clear();
+  // getStart(start);
   micLevel = mic.getLevel();
   background(0);
   //IGNORE EVERYTHING ABOVE THIS COMMENT
@@ -209,7 +211,7 @@ function draw() {
   fill(255,0,0);
   text(micLevel,50,50);
   displayVisible();
-  if (micLevel > .3){
+  if (getStart(start)){
     posx = (((hidden_count+1)%6)/8)*700;
     z = floor((hidden_count)/5)
     posy = z*750;
@@ -221,10 +223,14 @@ function draw() {
   }
 }
 
+function getStart(start) {
+  return start;
+}
+
 function addToVisible(){
   append(visible_names,hidden_names[hidden_count]);
   hidden_count++;
-  if(hidden_count == hidden_names.length){
+  if (hidden_count == hidden_names.length){
     hidden_count = 0;
   }
 }
